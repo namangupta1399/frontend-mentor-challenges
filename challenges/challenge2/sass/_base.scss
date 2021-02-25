@@ -1,0 +1,62 @@
+:root {
+    --color-red: hsl(0, 78%, 62%);
+    --color-cyan: hsl(180, 62%, 55%);
+    --color-orange: hsl(34, 97%, 64%);
+    --color-blue: hsl(212, 86%, 64%);
+    --color-dark-blue: hsl(234, 12%, 34%);
+    --color-grayish-blue: hsl(229, 6%, 66%);
+    --color-light-gray: hsl(0, 0%, 98%);
+
+    --weight-200: 200;
+    --weight-400: 400;
+    --weight-600: 600;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 93.75%;  // 1rem = 15px; 15px/16px = 93.75%
+    box-sizing: border-box;
+    
+    @media only screen and (max-width: 400px) {
+        font-size: 75%; // 1rem = 12px; 12px/16px = 75%
+    }
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    font-weight: 400;
+    background-color: var(--color-light-gray);
+}
+
+// Setting classes for font weight: 200, 400, 600
+@for $i from 1 through 3 {
+    .weight-#{$i * 200} {
+        font-weight: #{$i * 200};
+    }
+}
+
+// Color classes
+.text-dark-blue {
+    color: var(--color-dark-blue);
+}
+
+.text-grayish-blue {
+    color: var(--color-grayish-blue);
+}
+
+// Margin class
+.mb-sm {
+    margin-bottom: 1rem;
+}
+
+.mb-md {
+    margin-bottom: 2rem;
+}
