@@ -1,0 +1,50 @@
+:root {
+    --color-violet: hsl(257, 40%, 49%);
+    --color-soft-magenta: hsl(300, 69%, 71%);
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    background-image: url(../images/bg-desktop.svg);
+    background-color: var(--color-violet);
+    background-repeat: no-repeat;
+    line-height: 1.7;
+    padding: 3rem;
+    padding-bottom: 0;
+    color: #ddd;
+    font-size: 112.5%;    // 1rem = 18px, 18px/16px = 112.5%
+
+    @media only screen and (max-width: 800px) {
+        background-image: url(../images/bg-mobile.svg);
+        background-size: contain;
+        font-size: 100%;
+    }
+
+    @media only screen and (max-width: 400px) {
+        padding: 2rem;
+        padding-bottom: 0;
+        font-size: 87.5%    // 1rem = 14px, 14px/16px = 87.5%
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+.mb-md {
+    margin-bottom: 2rem;
+}
