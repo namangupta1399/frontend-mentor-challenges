@@ -1,0 +1,42 @@
+.content {
+    // background-color: orangered;
+    // padding: 10rem 0;
+    color: #fff;
+    align-self: center;
+    padding: 0px 3rem;
+
+    grid-column: center-start / col-end 1;
+    grid-row: 2 / 3;
+
+    @media only screen and (max-width: $bp-large) {
+        padding: 0;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        grid-column: 1 / -1;
+
+        margin-bottom: 2rem;
+    }
+}
+
+.footer {
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+    align-self: end;
+
+    margin-top: 1rem;
+
+    @media only screen and (max-width: $bp-small) {
+        grid-row: 4 / span 1;
+        grid-column: 1 / -1;
+    }
+
+    .attribution {
+        font-size: 11px;
+        text-align: center;
+    }
+
+    .attribution a {
+        color: hsl(228, 45%, 44%);
+    }
+}
