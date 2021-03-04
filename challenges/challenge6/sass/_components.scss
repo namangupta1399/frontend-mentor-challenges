@@ -1,0 +1,121 @@
+.toggle {
+
+    margin: 0 1rem;
+
+    &__btn {
+        display: none;
+    }
+
+    &__display {
+        width: 5rem;
+        border-radius: 2rem;
+        padding: 8px;
+        cursor: pointer;
+        background-image: var(--gradient);
+        transform: scale(.7);
+    }
+
+    &__ball {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        position: relative;
+        left: 0;
+        transition: all .2s;
+        background-color: var(--color-very-light-grayish-blue);
+    }
+
+    &__btn:checked + &__label > &__display >  &__ball {
+        // margin-left: auto;
+        transform: translateX(-100%);
+        left: 100%;
+    }
+}
+
+.card {
+    display: inline-block;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 15px 0px rgba(73, 73, 73, .2);
+
+    & > *:not(:last-child) {
+        margin-bottom: 1.5rem;
+    }
+
+    &__type {
+        color: var(--color-grayish-blue);
+    }
+
+    &__price {
+        font-size: 4rem;
+        color: var(--color-dark-grayish-blue);
+
+        &--annually {
+            display: none;
+        }
+
+        &--monthly {
+
+        }
+
+        & > * {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        & > * > .currency-icon {
+            font-size: 2.2rem;
+            margin-right: 6px;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        color: var(--color-grayish-blue);
+
+        &-item {
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--color-light-grayish-blue);
+
+            &:first-child {
+                border-top: 1px solid var(--color-light-grayish-blue);
+            }
+        }
+    }
+
+    &__btn {
+        text-transform: uppercase;
+        background-image: var(--gradient);
+        width: 100%;
+        border-radius: 5px;
+        border: none;
+        padding: .8rem 4rem;
+        cursor: pointer;
+        letter-spacing: 2px;
+        color: var(--color-very-light-grayish-blue);
+        font-family: inherit;
+        margin-top: .5rem;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &--solid {
+        padding: 3rem 2rem;
+        transform: scale(1.05);
+        background-image: linear-gradient(to bottom right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+        
+        & > * {
+            color: var(--color-very-light-grayish-blue);
+        }
+
+        .card__btn {
+            color: hsl(237, 63%, 64%);
+            background-image: none;
+            background-color: var(--color-very-light-grayish-blue);
+        }
+    }
+}
