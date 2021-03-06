@@ -26,7 +26,7 @@ body {
     font-weight: 700;
     font-size: 93.75%;  // 15px/16px = 93.75%, 1rem = 15px
 
-    background: url(../images/bg-top.svg) no-repeat top right, url(../images/bg-bottom.svg) no-repeat bottom left;
+    background: url(../images/bg-top.svg) no-repeat top right, url(../images/bg-bottom.svg) no-repeat bottom left, var(--color-very-light-grayish-blue);
 
     @media only screen and (max-width: $bp-md) {
         background: url(../images/bg-top.svg) no-repeat top right;

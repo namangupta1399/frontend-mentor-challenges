@@ -19,7 +19,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 93.75%;
-  background: url(../images/bg-top.svg) no-repeat top right, url(../images/bg-bottom.svg) no-repeat bottom left; }
+  background: url(../images/bg-top.svg) no-repeat top right, url(../images/bg-bottom.svg) no-repeat bottom left, var(--color-very-light-grayish-blue); }
   @media only screen and (max-width: 53.12em) {
     body {
       background: url(../images/bg-top.svg) no-repeat top right; } }
@@ -58,7 +58,7 @@ body {
   padding: 2rem;
   text-align: center;
   border-radius: 8px;
-  box-shadow: 0 0 15px 0px rgba(73, 73, 73, 0.2);
+  box-shadow: 0 0 5px 1px rgba(73, 73, 73, 0.2);
   background-color: #fff; }
   .card > *:not(:last-child) {
     margin-bottom: 1.5rem; }
