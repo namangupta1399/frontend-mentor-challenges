@@ -7,6 +7,8 @@
     --color-dark-grayish-blue: hsl(232, 13%, 33%);
 }
 
+$bp-md: 53.12em;
+
 *,
 *::before,
 *::after {
@@ -23,6 +25,12 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 93.75%;  // 15px/16px = 93.75%, 1rem = 15px
+
+    background: url(../images/bg-top.svg) no-repeat top right, url(../images/bg-bottom.svg) no-repeat bottom left;
+
+    @media only screen and (max-width: $bp-md) {
+        background: url(../images/bg-top.svg) no-repeat top right;
+    }
 
 
     & > * {
