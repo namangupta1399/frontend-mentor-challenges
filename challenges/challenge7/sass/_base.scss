@@ -1,0 +1,51 @@
+:root {
+    --color-dark-violet: hsl(256, 26%, 20%);
+    --color-grayish-blue: hsl(216, 30%, 68%);
+    --color-very-dark-Violet: hsl(270, 9%, 17%);
+    --color-dark-grayish-violet: hsl(273, 4%, 51%);
+    --color-very-light-gray: hsl(0, 0%, 98%);
+}
+
+$bp-lg: 75em;       // 1200px
+$bp-md: 62.5em;       // 1000px
+$bp-sm: 43.75em;       // 700px
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    @media only screen and (max-width: $bp-md) {
+        font-size: 87.5%;   // 14px/16px=87.56%
+    }
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+
+    & > * {
+        grid-column: center-start / center-end;
+    }
+}
+
+.container {
+    display: grid;
+    grid-template-columns: [full-start] minmax(4rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 10rem) [col-end]) [center-end] minmax(4rem, 1fr) [full-end];
+
+    @media only screen and (max-width: $bp-md){
+        grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 10rem) [col-end]) [center-end] minmax(2rem, 1fr) [full-end];
+    }
+
+    @media only screen and (max-width: $bp-sm){
+        grid-template-columns: [full-start] minmax(1rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 10rem) [col-end]) [center-end] minmax(1rem, 1fr) [full-end];
+    }
+    // grid-template-rows: 10vh 120vh repeat(3, min-content);
+    grid-template-rows: 10vh;
+}
